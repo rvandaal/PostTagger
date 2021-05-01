@@ -1,0 +1,73 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <!--
+        ==
+        == Color definitions
+        ==
+    -->
+    <!--  Tints  -->
+    <Color x:Key="MedtronicGray01Color">#F2F2F2</Color>
+
+    <Color x:Key="MedtronicGray02Color">#E5E5E5</Color>
+
+    <!--  Prime  -->
+    <Color x:Key="MedtronicGray03Color">#B2B2B2</Color>
+
+    <!--  Shades  -->
+    <Color x:Key="MedtronicGray04Color">#595959</Color>
+
+    <Color x:Key="MedtronicGray05Color">#262626</Color>
+
+    <!--  Tints  -->
+    <Color x:Key="MedtronicBlue01Color">#CDE8F2</Color>
+    <Color x:Key="MedtronicBlue02Color">#A4D8ED</Color>
+    <Color x:Key="MedtronicBlue03Color">#8ABDD8</Color>
+    <!--  Prime  -->
+    <Color x:Key="MedtronicBlue04Color">#739DB5</Color>
+    <!--  Shades  -->
+    <Color x:Key="MedtronicBlue05Color">#618599</Color>
+    <Color x:Key="MedtronicBlue06Color">#516F80</Color>
+
+    <Color x:Key="MedtronicBlue07Color">#167CB2</Color>
+    <Color x:Key="MedtronicBlue08Color">#244B62</Color>
+
+    <!--  Tints  -->
+    <Color x:Key="MedtronicGreenTint01Color">#8DD98D</Color>
+    <!--  Prime  -->
+    <Color x:Key="MedtronicGreen01Color">#84B784</Color>
+    <!--  Shades  -->
+    <Color x:Key="MedtronicGreen02Color">#6E996E</Color>
+
+    <!--  Tints  -->
+    <Color x:Key="MedtronicRed01Color">#F9AD98</Color>
+    <!--  Prime  -->
+    <Color x:Key="MedtronicRed02Color">#E6978E</Color>
+    <!--  Shades  -->
+    <Color x:Key="MedtronicRed03Color">#CC7C73</Color>
+    <Color x:Key="MedtronicRed04Color">#B36C65</Color>
+
+    <Color x:Key="MedtronicDialogShadowColor">#B2B2B2</Color>
+
+    <Color x:Key="MedtronicRoyalBlueColor">#0068A2</Color>
+
+    <!--  Gray03  -->
+
+    <!--  Z7 spec: error message = #FFFF4200  -->
+    <!--  Used for errors  -->
+    <Color x:Key="SapiensRed00Color">#FFed4747</Color>
+
+
+    <!--  http://www.w3schools.com/tags/ref_colorpicker.asp?colorhex=808080  -->
+
+
+    <!--  Opaque brushes for ViewArea  -->
+    <Color x:Key="SapiensGray05OpaqueHighColor">#99999999</Color>
+
+    <!--  Generic background color  -->
+    <Color x:Key="WhiteColor">#FFFFFFFF</Color>
+
+    <!--  Shadow colors  -->
+    <Color x:Key="ShadowColor">Gray</Color>
+    <Color x:Key="ViewAreaShadowColor">Black</Color>
+
+</ResourceDictionary>

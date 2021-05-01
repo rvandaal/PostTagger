@@ -1,0 +1,367 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:po="http://schemas.microsoft.com/winfx/2006/xaml/presentation/options">
+
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="ColorResourceDictionary.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+
+    <!--  To move  -->
+
+    <SolidColorBrush x:Key="MedtronicInteractionBarBackgroundBrush" po:Freeze="True"
+                     Color="#2B2B2B" />
+    <SolidColorBrush x:Key="MedtronicInteractionBarBorderBrush" po:Freeze="True"
+                     Color="#424242" />
+    <SolidColorBrush x:Key="MedtronicInteractionControlBackgroundBrush" po:Freeze="True"
+                     Color="{StaticResource MedtronicBlue07Color}" />
+    <SolidColorBrush x:Key="MedtronicInteractionControlMouseOverBackgroundBrush" po:Freeze="True"
+                     Color="{StaticResource MedtronicBlue08Color}" />
+    <SolidColorBrush x:Key="MedtronicInteractionBarShadowBrush" po:Freeze="True"
+                     Color="#151515" />
+
+    <!--  Blue01  -->
+    <SolidColorBrush x:Key="MedtronicListItemMouseOverBackgroundBrush" po:Freeze="True"
+                     Color="{StaticResource MedtronicBlue01Color}" />
+
+    <!--  Blue02  -->
+    <SolidColorBrush x:Key="MedtronicPatientBarMinorTextBrush" po:Freeze="True"
+                     Color="{StaticResource MedtronicBlue02Color}" />
+    <SolidColorBrush x:Key="MedtronicAnnotationTagBackgroundBrush" po:Freeze="True"
+                     Color="{StaticResource MedtronicBlue02Color}" />
+
+    <!--  Blue03  -->
+    <SolidColorBrush x:Key="MedtronicImportantButtonMouseOverBackgroundBrush" po:Freeze="True"
+                     Color="{StaticResource MedtronicBlue03Color}" />
+    <SolidColorBrush x:Key="MedtronicSlidingTabControlBorderBrush" po:Freeze="True"
+                     Color="{StaticResource MedtronicBlue03Color}" />
+
+    <LinearGradientBrush x:Key="MedtronicImportantButtonBackgroundBrush" po:Freeze="True" StartPoint="0,0" EndPoint="1,1">
+        <GradientStop Offset="0" Color="{StaticResource MedtronicBlue03Color}" />
+        <GradientStop Offset="1" Color="{StaticResource MedtronicBlue05Color}" />
+    </LinearGradientBrush>
+
+    <LinearGradientBrush x:Key="MedtronicToggleSwitchMouseOverBackgroundBrush" po:Freeze="True" StartPoint="0,0" EndPoint="1,1">
+        <GradientStop Offset="0" Color="{StaticResource MedtronicBlue03Color}" />
+        <GradientStop Offset="1" Color="{StaticResource MedtronicBlue04Color}" />
+    </LinearGradientBrush>
+
+    <!--  Blue04  -->
+    <SolidColorBrush x:Key="MedtronicButtonCheckedBackgroundBrush" po:Freeze="True"
+                     Color="{StaticResource MedtronicBlue04Color}" />
+    <SolidColorBrush x:Key="MedtronicListItemSelectedBackgroundBrush" po:Freeze="True"
+                     Color="{StaticResource MedtronicBlue04Color}" />
+
+    <!--  Blue05  -->
+    <SolidColorBrush x:Key="MedtronicButtonBorderBrush" po:Freeze="True"
+                     Color="{StaticResource MedtronicBlue05Color}" />
+    <SolidColorBrush x:Key="MedtronicInputBorderBrush" po:Freeze="True"
+                     Color="{StaticResource MedtronicBlue05Color}" />
+    <SolidColorBrush x:Key="MedtronicToggleSwitchBorderBrush" po:Freeze="True"
+                     Color="{StaticResource MedtronicBlue05Color}" />
+    <SolidColorBrush x:Key="MedtronicButtonPressedBackgroundBrush" po:Freeze="True"
+                     Color="{StaticResource MedtronicBlue05Color}" />
+
+    <SolidColorBrush x:Key="MedtronicAcceptedTaskIconBrush" po:Freeze="True"
+                     Color="{StaticResource MedtronicBlue05Color}" />
+    <SolidColorBrush x:Key="MedtronicToggleSwitchForegroundBrush" po:Freeze="True"
+                     Color="{StaticResource MedtronicBlue05Color}" />
+    <SolidColorBrush x:Key="MedtronicImportantButtonPressedBackgroundBrush" po:Freeze="True"
+                     Color="{StaticResource MedtronicBlue05Color}" />
+    <SolidColorBrush x:Key="MedtronicViewportForegroundBrush" po:Freeze="True"
+                     Color="White" />
+    <SolidColorBrush x:Key="MedtronicActiveTabForegroundBrush" po:Freeze="True"
+                     Color="{StaticResource MedtronicRoyalBlueColor}" />
+
+    <!--  Blue06  -->
+    <SolidColorBrush x:Key="MedtronicButtonForegroundBrush" po:Freeze="True"
+                     Color="{StaticResource MedtronicBlue06Color}" />
+    <SolidColorBrush x:Key="MedtronicInputForegroundBrush" po:Freeze="True"
+                     Color="{StaticResource MedtronicBlue06Color}" />
+
+    <!--  Royal Blue  -->
+    <SolidColorBrush x:Key="MedtronicTaskIconBrush" po:Freeze="True"
+                     Color="{StaticResource MedtronicRoyalBlueColor}" />
+    <SolidColorBrush x:Key="MedtronicIconBrush" po:Freeze="True"
+                     Color="{StaticResource MedtronicRoyalBlueColor}" />
+    <SolidColorBrush x:Key="MedtronicHeaderTextBrush" po:Freeze="True"
+                     Color="{StaticResource MedtronicRoyalBlueColor}" />
+    <SolidColorBrush x:Key="MedtronicToolTipBackgroundBrush" po:Freeze="True"
+                     Color="{StaticResource MedtronicRoyalBlueColor}" />
+    <SolidColorBrush x:Key="MedtronicSwitchForegroundBrush" po:Freeze="True"
+                     Color="{StaticResource MedtronicRoyalBlueColor}" />
+    <SolidColorBrush x:Key="MedtronicProgressBarFilledBackgroundBrush" po:Freeze="True"
+                     Color="{StaticResource MedtronicRoyalBlueColor}" />
+    <SolidColorBrush x:Key="MedtronicDataGridDropLocationIndicatorBrush" po:Freeze="True"
+                     Color="{StaticResource MedtronicRoyalBlueColor}" />
+
+    <SolidColorBrush x:Key="MdtRoyalBlueBrush" po:Freeze="True"
+                     Color="{StaticResource MedtronicRoyalBlueColor}" />
+    <SolidColorBrush x:Key="MdtTextBrush" po:Freeze="True"
+                     Color="{StaticResource MedtronicGray04Color}" />
+
+    <LinearGradientBrush x:Key="LeadBodyBackgroundBrush" po:Freeze="True" StartPoint="0,0" EndPoint="1,0">
+        <GradientStop Offset="0.5" Color="#99CCCC" />
+        <GradientStop Offset="1" Color="#949494" />
+    </LinearGradientBrush>
+
+    <LinearGradientBrush x:Key="LeadContactFloatingBackgroundBrush" po:Freeze="True" StartPoint="0,0" EndPoint="1,0">
+        <GradientStop Offset="0.5" Color="White" />
+        <GradientStop Offset="1" Color="#F7F7F7" />
+    </LinearGradientBrush>
+
+    <LinearGradientBrush x:Key="LeadContactAnodeBackgroundBrush" po:Freeze="True" StartPoint="0,0" EndPoint="1,0">
+        <GradientStop Offset="0.5" Color="#FF8833" />
+        <GradientStop Offset="1" Color="#E6792E" />
+    </LinearGradientBrush>
+
+    <LinearGradientBrush x:Key="LeadContactCathodeBackgroundBrush" po:Freeze="True" StartPoint="0,0" EndPoint="1,0">
+        <GradientStop Offset="0.5" Color="#0050FF" />
+        <GradientStop Offset="1" Color="#295DCC" />
+    </LinearGradientBrush>
+
+
+    <!--  Gray01  -->
+
+    <!--  Gray02  -->
+    <SolidColorBrush x:Key="MedtronicCancelButtonMouseOverBackgroundBrush" po:Freeze="True"
+                     Color="{StaticResource MedtronicGray02Color}" />
+    <SolidColorBrush x:Key="MedtronicContextMenuSeparatorBrush" po:Freeze="True"
+                     Color="{StaticResource MedtronicGray02Color}" />
+    <SolidColorBrush x:Key="MedtronicProgressBarBackgroundBrush" po:Freeze="True"
+                     Color="{StaticResource MedtronicGray02Color}" />
+    <SolidColorBrush x:Key="MedtronicGridLineBrush" po:Freeze="True"
+                     Opacity="0.3"
+                     Color="{StaticResource MedtronicGray02Color}" />
+
+    <!--  Gray03  -->
+    <SolidColorBrush x:Key="MedtronicSubHeaderTextBrush" po:Freeze="True"
+                     Color="{StaticResource MedtronicGray03Color}" />
+    <SolidColorBrush x:Key="MedtronicCancelButtonPressedBackgroundBrush" po:Freeze="True"
+                     Color="{StaticResource MedtronicGray03Color}" />
+    <SolidColorBrush x:Key="MedtronicDialogSeparatorBrush" po:Freeze="True"
+                     Opacity="0.5"
+                     Color="{StaticResource MedtronicGray03Color}" />
+
+    <LinearGradientBrush x:Key="MedtronicCancelButtonBackgroundBrush" po:Freeze="True" StartPoint="0,0" EndPoint="1,1">
+        <GradientStop Offset="0" Color="{StaticResource MedtronicGray02Color}" />
+        <GradientStop Offset="1" Color="{StaticResource MedtronicGray03Color}" />
+    </LinearGradientBrush>
+
+    <SolidColorBrush x:Key="MedtronicSeparatorBrush" po:Freeze="True"
+                     Color="{StaticResource MedtronicGray03Color}" />
+    <SolidColorBrush x:Key="SidePanelExpanderChevronMouseOverBrush" po:Freeze="True"
+                     Color="{StaticResource MedtronicGray03Color}" />
+
+    <!--  Gray04  -->
+    <SolidColorBrush x:Key="MedtronicTabControlBorderBrush" po:Freeze="True"
+                     Color="{StaticResource MedtronicGray04Color}" />
+    <SolidColorBrush x:Key="MedtronicTaskCancelButtonForegroundBrush" po:Freeze="True"
+                     Color="{StaticResource MedtronicGray04Color}" />
+
+    <SolidColorBrush x:Key="MedtronicLeadBodyBorderBrush" po:Freeze="True"
+                     Color="{StaticResource MedtronicGray04Color}" />
+    <SolidColorBrush x:Key="SidePanelExpanderChevronBackgroundBrush" po:Freeze="True"
+                     Color="{StaticResource MedtronicGray04Color}" />
+
+    <!--  Gray05  -->
+
+    <!--  Gray06  -->
+
+    <!--  Red01  -->
+    <SolidColorBrush x:Key="MedtronicNegativeButtonMouseOverBackgroundBrush" po:Freeze="True"
+                     Color="{StaticResource MedtronicRed01Color}" />
+
+    <!--  Red02  -->
+    <LinearGradientBrush x:Key="MedtronicNegativeButtonBackgroundBrush" po:Freeze="True" StartPoint="0,0" EndPoint="1,1">
+        <GradientStop Offset="0" Color="{StaticResource MedtronicRed01Color}" />
+        <GradientStop Offset="1" Color="{StaticResource MedtronicRed03Color}" />
+    </LinearGradientBrush>
+
+    <!--  Red03  -->
+
+    <!--  Red04  -->
+    <SolidColorBrush x:Key="MedtronicNegativeButtonPressedBackgroundBrush" po:Freeze="True"
+                     Color="{StaticResource MedtronicRed04Color}" />
+
+    <!--  Green  -->
+    <SolidColorBrush x:Key="MedtronicPositiveButtonMouseOverBackgroundBrush" po:Freeze="True"
+                     Color="{StaticResource MedtronicGreen01Color}" />
+    <SolidColorBrush x:Key="MedtronicPositiveButtonPressedBackgroundBrush" po:Freeze="True"
+                     Color="{StaticResource MedtronicGreen02Color}" />
+
+    <LinearGradientBrush x:Key="MedtronicPositiveButtonBackgroundBrush" po:Freeze="True" StartPoint="0,0" EndPoint="1,1">
+        <GradientStop Offset="0" Color="{StaticResource MedtronicGreen01Color}" />
+        <GradientStop Offset="1" Color="{StaticResource MedtronicGreen02Color}" />
+    </LinearGradientBrush>
+
+    <!--  White  -->
+    <SolidColorBrush x:Key="MedtronicBackgroundBrush" po:Freeze="True"
+                     Color="{StaticResource WhiteColor}" />
+    <SolidColorBrush x:Key="MedtronicListItemSelectedForegroundBrush" po:Freeze="True"
+                     Color="{StaticResource WhiteColor}" />
+    <SolidColorBrush x:Key="MedtronicButtonCheckedForegroundBrush" po:Freeze="True"
+                     Color="{StaticResource WhiteColor}" />
+    <SolidColorBrush x:Key="MedtronicButtonActiveForegroundBrush" po:Freeze="True"
+                     Color="{StaticResource WhiteColor}" />
+    <SolidColorBrush x:Key="MedtronicButtonBackgroundBrush" po:Freeze="True"
+                     Color="{StaticResource WhiteColor}" />
+    <SolidColorBrush x:Key="MedtronicInputBackgroundBrush" po:Freeze="True"
+                     Color="{StaticResource WhiteColor}" />
+    <SolidColorBrush x:Key="MedtronicImportantButtonForegroundBrush" po:Freeze="True"
+                     Color="{StaticResource WhiteColor}" />
+    <SolidColorBrush x:Key="MedtronicPatientBarMajorTextBrush" po:Freeze="True"
+                     Color="{StaticResource WhiteColor}" />
+
+    <!--  =====================  -->
+    <!--  OLD sapiens brushes  -->
+    <!--  =====================  -->
+
+    <!--  General brushes  -->
+    <SolidColorBrush x:Key="MainBackgroundBrush" po:Freeze="True"
+                     Color="{StaticResource MedtronicGray02Color}" />
+    <SolidColorBrush x:Key="GeneralBackgroundBrush" po:Freeze="True"
+                     Color="{StaticResource WhiteColor}" />
+    <SolidColorBrush x:Key="GeneralForegroundBrush" po:Freeze="True"
+                     Color="{StaticResource MedtronicGray04Color}" />
+
+    <!--  Text related brushes  -->
+    <SolidColorBrush x:Key="DefaultTextBrush" po:Freeze="True"
+                     Color="{StaticResource MedtronicGray04Color}" />
+    <SolidColorBrush x:Key="ProgressBarInnerTextBrush" po:Freeze="True"
+                     Color="{StaticResource MedtronicGray03Color}" />
+    <SolidColorBrush x:Key="DefaultTextDarkBrush" po:Freeze="True"
+                     Color="{StaticResource MedtronicGray01Color}" />
+
+    <SolidColorBrush x:Key="ShadowBrush" po:Freeze="True"
+                     Color="{StaticResource ShadowColor}" />
+    <!--  Temporary hardcoded color value  -->
+    <SolidColorBrush x:Key="TabItemShadowBrush" po:Freeze="True"
+                     Color="#FF707070" />
+
+    <SolidColorBrush x:Key="DefaultErrorTextBrush" po:Freeze="True"
+                     Color="{StaticResource SapiensRed00Color}" />
+    <SolidColorBrush x:Key="ValidationErrorTextBrush" po:Freeze="True"
+                     Color="#E57272" />
+
+    <SolidColorBrush x:Key="SeparatorLineBrush" po:Freeze="True"
+                     Color="{StaticResource MedtronicGray02Color}" />
+
+    <!--  TabItem brushes  -->
+    <SolidColorBrush x:Key="TabControlBackgroundBrush" po:Freeze="True"
+                     Color="{StaticResource WhiteColor}" />
+    <SolidColorBrush x:Key="TabItemDisabledBackgroundBrush" po:Freeze="True"
+                     Color="{StaticResource MedtronicGray03Color}" />
+    <SolidColorBrush x:Key="TabItemDisabledBorderBrush" po:Freeze="True"
+                     Color="{StaticResource MedtronicGray03Color}" />
+    <!--  Don't remove the following 3 brushes, these are referenced by c# code  -->
+    <SolidColorBrush x:Key="TabItemIconDisabledBrush" po:Freeze="True"
+                     Color="{StaticResource MedtronicGray03Color}" />
+    <SolidColorBrush x:Key="TabItemBackgroundBrush" po:Freeze="True"
+                     Color="{StaticResource MedtronicGray01Color}" />
+    <SolidColorBrush x:Key="TabItemBorderBrush" po:Freeze="True"
+                     Color="{StaticResource MedtronicGray04Color}" />
+    <SolidColorBrush x:Key="TabItemVertFlowBackgroundBrush" po:Freeze="True"
+                     Color="{StaticResource MedtronicGray01Color}" />
+
+    <!--  DataGrid brushes  -->
+    <SolidColorBrush x:Key="DataGridGridLineBrush" po:Freeze="True"
+                     Color="{StaticResource MedtronicGray04Color}" />
+
+    <!--  ButtonCustom transparent brushes  -->
+    <SolidColorBrush x:Key="ButtonCustomTransparentActiveForegroundBrush" po:Freeze="True"
+                     Color="{StaticResource MedtronicGray05Color}" />
+
+    <!--  ButtonCustom ViewArea transparent brushes  -->
+    <SolidColorBrush x:Key="ButtonCustomViewAreaTransparentForegroundBrush" po:Freeze="True"
+                     Color="{StaticResource MedtronicGray04Color}" />
+    <SolidColorBrush x:Key="ButtonCustomViewAreaTransparentActiveForegroundBrush" po:Freeze="True"
+                     Color="{StaticResource MedtronicGray03Color}" />
+
+    <!--  ScrollBar light brushes  -->
+    <SolidColorBrush x:Key="ScrollBarBorderBrush" po:Freeze="True"
+                     Color="{StaticResource MedtronicGray03Color}" />
+    <SolidColorBrush x:Key="ScrollBarMouseOverBackgroundBrush" po:Freeze="True"
+                     Color="{StaticResource MedtronicGray01Color}" />
+    <SolidColorBrush x:Key="ScrollBarThumbBrush" po:Freeze="True"
+                     Color="{StaticResource MedtronicGray03Color}" />
+    <SolidColorBrush x:Key="ScrollBarThumbMouseOverBrush" po:Freeze="True"
+                     Color="{StaticResource MedtronicGray03Color}" />
+    <SolidColorBrush x:Key="ScrollBarThumbActiveBrush" po:Freeze="True"
+                     Color="{StaticResource MedtronicGray03Color}" />
+    <SolidColorBrush x:Key="ScrollBarThumbDisabledBrush" po:Freeze="True"
+                     Color="{StaticResource MedtronicGray01Color}" />
+
+    <!--  Slider light brushes  -->
+    <SolidColorBrush x:Key="SliderBorderBrush" po:Freeze="True"
+                     Color="{StaticResource MedtronicGray03Color}" />
+
+    <!--  Slider dark brushes  -->
+    <SolidColorBrush x:Key="SliderDarkRepeatForegroundBrush" po:Freeze="True"
+                     Color="{StaticResource MedtronicGray04Color}" />
+    <SolidColorBrush x:Key="SliderDarkRepeatMouseOverForegroundBrush" po:Freeze="True"
+                     Color="{StaticResource MedtronicGray03Color}" />
+    <SolidColorBrush x:Key="SliderDarkRepeatActiveForegroundBrush" po:Freeze="True"
+                     Color="{StaticResource MedtronicGray03Color}" />
+    <SolidColorBrush x:Key="SliderDarkRepeatDisabledForegroundBrush" po:Freeze="True"
+                     Color="{StaticResource MedtronicGray05Color}" />
+
+    <SolidColorBrush x:Key="SliderDarkThumbBrush" po:Freeze="True"
+                     Color="{StaticResource MedtronicGray04Color}" />
+    <SolidColorBrush x:Key="SliderDarkThumbMouseOverBrush" po:Freeze="True"
+                     Color="{StaticResource MedtronicGray03Color}" />
+    <SolidColorBrush x:Key="SliderDarkThumbActiveBrush" po:Freeze="True"
+                     Color="{StaticResource MedtronicGray03Color}" />
+    <SolidColorBrush x:Key="SliderDarkThumbDisabledBrush" po:Freeze="True"
+                     Color="{StaticResource MedtronicGray05Color}" />
+
+    <!--  StudyItem brushes  -->
+    <SolidColorBrush x:Key="StudyItemBorderBrush" po:Freeze="True"
+                     Color="{StaticResource MedtronicGray03Color}" />
+
+    <!--  SessionVolumeItem brushes  -->
+    <SolidColorBrush x:Key="SessionVolumeItemBorderBrush" po:Freeze="True"
+                     Color="{StaticResource MedtronicGray04Color}" />
+
+    <!--  Thumbnail brushes  -->
+    <SolidColorBrush x:Key="ThumbnailBorderBrush" po:Freeze="True"
+                     Color="{StaticResource MedtronicGray04Color}" />
+
+    <!--  VolumeItem brushes  -->
+    <SolidColorBrush x:Key="VolumeItemBackgroundBrush" po:Freeze="True"
+                     Color="Transparent" />
+
+    <SolidColorBrush x:Key="ViewAreaComboBoxItemMouseOverBackgroundBrush" po:Freeze="True"
+                     Color="{StaticResource MedtronicGray03Color}" />
+    <SolidColorBrush x:Key="ViewAreaComboBoxItemSelectedBackgroundBrush" po:Freeze="True"
+                     Color="{StaticResource MedtronicGray04Color}" />
+
+    <!--  ComboBox ViewArea brushes  -->
+    <SolidColorBrush x:Key="ComboBoxViewAreaForegroundBrush" po:Freeze="True"
+                     Color="{StaticResource MedtronicGray01Color}" />
+    <SolidColorBrush x:Key="ComboBoxViewAreaActiveBackgroundBrush" po:Freeze="True"
+                     Color="{StaticResource MedtronicGray04Color}" />
+    <SolidColorBrush x:Key="ComboBoxViewAreaBorderBrush" po:Freeze="True"
+                     Color="{StaticResource MedtronicGray05Color}" />
+    <SolidColorBrush x:Key="ComboBoxViewAreaMouseOverBorderBrush" po:Freeze="True"
+                     Color="{StaticResource SapiensGray05OpaqueHighColor}" />
+
+    <!--  ProgressBar brushes  -->
+    <LinearGradientBrush x:Key="ProgressBarIndicatorAnimatedFill" po:Freeze="True" StartPoint="0,0" EndPoint="1,0">
+        <GradientStop Offset="0" Color="#00FFFFFF" />
+        <GradientStop Offset="0.4" Color="#60FFFFFF" />
+        <GradientStop Offset="0.6" Color="#60FFFFFF" />
+        <GradientStop Offset="1" Color="#00FFFFFF" />
+    </LinearGradientBrush>
+
+    <!--  UserMessage brushes  -->
+    <SolidColorBrush x:Key="UserMessageErrorTextBrush" po:Freeze="True"
+                     Color="{StaticResource SapiensRed00Color}" />
+
+    <SolidColorBrush x:Key="UserMessageBackgroundBrush" po:Freeze="True"
+                     Color="{StaticResource MedtronicGray01Color}" />
+
+    <!--  Viewport direction indication brushes  -->
+    <SolidColorBrush x:Key="ViewportDirectionIndicationBrush" po:Freeze="True"
+                     Color="{StaticResource MedtronicBlue08Color}" />
+
+</ResourceDictionary>

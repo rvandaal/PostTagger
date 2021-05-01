@@ -1,0 +1,61 @@
+﻿<Window x:Class="PDFTagger.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:scm="clr-namespace:System.ComponentModel;assembly=WindowsBase"
+        xmlns:local="clr-namespace:PDFTagger"
+        xmlns:Behaviors="clr-namespace:PDFTagger.Behaviors"
+        xmlns:controls="clr-namespace:PDFTagger.Controls"
+        mc:Ignorable="d" SizeToContent="Height" ResizeMode="NoResize"
+        Title="Post" Width="320">
+    <Window.Resources>
+        <BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter"/>
+    </Window.Resources>
+    <Grid>
+        <StackPanel>
+            <GroupBox Header="Geselecteerd document" Margin="10">
+                <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled" Height="96" Margin="10">
+                    <ItemsControl ItemsSource="{Binding SelectedFiles}"/>
+                </ScrollViewer>
+            </GroupBox>
+            <GroupBox Grid.Column="1" Header="Details" Margin="10">
+                <StackPanel Margin="10">
+                    <controls:AutoCompleteBox x:Name="companyAutoCompleteBox"
+                        Behaviors:WatermarkExtension.WatermarkText="{Binding HintCompany}"
+                                                  EnterPressed="OnCompanyCommitted"
+                                                  Text="{Binding Company,
+                                                                 Mode=TwoWay,
+                                                                 UpdateSourceTrigger=PropertyChanged,
+                                                                 ValidatesOnDataErrors=True}"
+                        TextItemsSource="{Binding PredefinedCompanies}"/>
+
+                    <controls:AutoCompleteBox x:Name="dateAutoCompleteBox" Margin="0,30,0,0"
+                        Behaviors:WatermarkExtension.WatermarkText="{Binding HintDate}"
+                                                  EnterPressed="OnDateCommitted"
+                                                  Text="{Binding DateString,
+                                                                 Mode=TwoWay,
+                                                                 UpdateSourceTrigger=LostFocus,
+                                                                 ValidatesOnDataErrors=True}"/>
+                    <Calendar Margin="0,5,0,0" SelectedDate="{Binding Date}" DisplayDate="{Binding Date}"/>
+
+                    <controls:AutoCompleteBox x:Name="descriptionAutoCompleteBox"
+                                              Margin="0,30,0,0"
+                        Behaviors:WatermarkExtension.WatermarkText="{Binding HintDescription}"
+                                                  EnterPressed="OnDescriptionCommitted"
+                                                  Text="{Binding Description,
+                                                                 Mode=TwoWay,
+                                                                 UpdateSourceTrigger=PropertyChanged,
+                                                                 ValidatesOnDataErrors=True}"
+                                              TextItemsSource="{Binding PredefinedDescriptions}"/>
+                    <StackPanel Margin="0,20,0,0" Visibility="{Binding NewFilenameVisible, Converter={StaticResource BooleanToVisibilityConverter}}">
+                        <Label x:Name="newFilenameLabel" Content="Nieuwe bestandsnaam" Foreground="Gray"/>
+                        <TextBlock Text="{Binding NewFilename}" Margin="5,5,0,0" TextWrapping="Wrap"/>
+                    </StackPanel>
+                    <Button x:Name="saveButton" Content="Save" Margin="0,10,0,0" 
+                            HorizontalAlignment="Right" Padding="12,6" Command="{Binding SaveCommand}"/>
+                </StackPanel>
+            </GroupBox>
+        </StackPanel>
+    </Grid>
+</Window>
