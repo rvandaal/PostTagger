@@ -1,0 +1,33 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:po="http://schemas.microsoft.com/winfx/2006/xaml/presentation/options">
+
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="ColorResourceDictionary.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+
+    <SolidColorBrush x:Key="ListItemMouseOverBackgroundBrush" po:Freeze="True"
+                     Color="{StaticResource Blue01Color}" />
+    
+    <SolidColorBrush x:Key="ListItemSelectedBackgroundBrush" po:Freeze="True"
+                     Color="{StaticResource Blue04Color}" />
+
+    <SolidColorBrush x:Key="InputBorderBrush" po:Freeze="True"
+                     Color="{StaticResource Blue05Color}" />    
+
+    <SolidColorBrush x:Key="ButtonForegroundBrush" po:Freeze="True"
+                     Color="{StaticResource Blue06Color}" />
+
+    <SolidColorBrush x:Key="InputForegroundBrush" po:Freeze="True"
+                     Color="{StaticResource Blue06Color}" />
+
+    <SolidColorBrush x:Key="ListItemSelectedForegroundBrush" po:Freeze="True"
+                     Color="{StaticResource WhiteColor}" />
+    
+    <SolidColorBrush x:Key="InputBackgroundBrush" po:Freeze="True"
+                     Color="{StaticResource WhiteColor}" />
+    
+    <SolidColorBrush x:Key="ValidationErrorTextBrush" po:Freeze="True"
+                     Color="#E57272" />    
+
+</ResourceDictionary>

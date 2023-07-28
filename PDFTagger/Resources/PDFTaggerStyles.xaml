@@ -1,0 +1,15 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:controls="clr-namespace:PDFTagger.Controls">
+    <!--
+        This file contains:
+        1. The regular implicit styles for all controls
+        2. Any parent specific implicit styles. For example: controls inside a TaskPanel can have an alternative style. This style can be
+        defined inside the Style.Resources of the parent control's style.
+    -->
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="ControlStyles/AutoCompleteBoxStyles.xaml" />
+        <ResourceDictionary Source="ControlStyles/InfoBalloonStyles.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+    <Style BasedOn="{StaticResource AutoCompleteBoxStyle}" TargetType="{x:Type controls:AutoCompleteBox}" />
+    <Style BasedOn="{StaticResource InfoBalloonErrorStyle}" TargetType="{x:Type controls:InfoBalloon}" />
+</ResourceDictionary>

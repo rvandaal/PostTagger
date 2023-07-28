@@ -1,0 +1,14 @@
+﻿<Application x:Class="PDFTagger.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:PDFTagger"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/PDFTagger;component/Resources/Brushes/BrushResourceDictionary.xaml" />
+                <ResourceDictionary Source="/PDFTagger;component/Resources/PDFTaggerStyles.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

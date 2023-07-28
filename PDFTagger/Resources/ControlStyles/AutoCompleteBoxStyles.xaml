@@ -1,0 +1,178 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:Behaviors="clr-namespace:PDFTagger.Behaviors" xmlns:Controls="clr-namespace:PDFTagger.Controls"
+                    xmlns:converters="clr-namespace:PDFTagger.Converters"
+                    xmlns:po="http://schemas.microsoft.com/winfx/2006/xaml/presentation/options">
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="InfoBalloonStyles.xaml" />
+        <!--<ResourceDictionary Source="TextResourceDictionary.xaml" />-->
+    </ResourceDictionary.MergedDictionaries>
+
+    <Style x:Key="InnerFocusVisualStyle" TargetType="Control">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Control">
+                    <Rectangle Margin="2" Stroke="Black"
+                               StrokeDashArray="1 2" StrokeThickness="1" />
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="SearchTextBlockHintTextBlockStyle" TargetType="TextBlock">
+        <Setter Property="FontSize" Value="14" />
+        <Setter Property="FontStyle" Value="Italic" />
+        <Setter Property="Opacity" Value="0.6" />
+    </Style>
+
+    <converters:TwoBooleanToVisibilityMultiConverter x:Key="TwoBooleanToVisibilityMultiConverter" />
+
+    <Style x:Key="AutoCompleteBoxItemStyle" TargetType="{x:Type ListBoxItem}">
+        <Setter Property="OverridesDefaultStyle" Value="true" />
+        <Setter Property="Background" Value="Transparent" />
+        <Setter Property="Foreground" Value="{DynamicResource ButtonForegroundBrush}" />
+        <Setter Property="Padding" Value="4,2" />
+        <Setter Property="HorizontalContentAlignment" Value="Stretch" />
+        <Setter Property="VerticalContentAlignment" Value="Center" />
+        <Setter Property="FocusVisualStyle" Value="{x:Null}" />
+        <Setter Property="Focusable" Value="True" />
+        <Setter Property="IsTabStop" Value="False" />
+        <Setter Property="Cursor" Value="Hand" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type ListBoxItem}">
+                    <Grid Background="Transparent">
+                        <Border x:Name="mainBorder" Margin="2"
+                                Background="{TemplateBinding Background}"
+                                BorderBrush="{TemplateBinding BorderBrush}"
+                                BorderThickness="{TemplateBinding BorderThickness}">
+                            <ContentPresenter Margin="{TemplateBinding Padding}"
+                                              HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                              VerticalAlignment="{TemplateBinding VerticalContentAlignment}" />
+                        </Border>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Background" Value="{DynamicResource ListItemMouseOverBackgroundBrush}" />
+            </Trigger>
+            <Trigger Property="IsSelected" Value="True">
+                <Setter Property="Background" Value="{DynamicResource ListItemSelectedBackgroundBrush}" />
+                <Setter Property="Foreground" Value="{DynamicResource ListItemSelectedForegroundBrush}" />
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="AutoCompleteBoxListBoxStyle" TargetType="{x:Type ListBox}">
+        <Setter Property="OverridesDefaultStyle" Value="True" />
+        <Setter Property="ItemContainerStyle" Value="{DynamicResource AutoCompleteBoxItemStyle}" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type ListBox}">
+                    <ItemsPresenter />
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="AutoCompleteBoxStyle" TargetType="{x:Type Controls:AutoCompleteBox}">
+        <Setter Property="Background" Value="{DynamicResource InputBackgroundBrush}" />
+        <Setter Property="Foreground" Value="{DynamicResource InputForegroundBrush}" />
+        <Setter Property="BorderBrush" Value="{DynamicResource InputBorderBrush}" />
+        <Setter Property="BorderThickness" Value="1" />
+        <Setter Property="Height" Value="30" />
+        <Setter Property="FocusVisualStyle" Value="{DynamicResource InnerFocusVisualStyle}" />
+        <Setter Property="IsTabStop" Value="true" />
+        <Setter Property="Validation.ErrorTemplate" Value="{x:Null}" />
+        <Setter Property="Cursor" Value="IBeam" />
+        <Setter Property="MaxLength" Value="1024" />
+        <!--
+            Do not set the Placement Targets directly on the InfoBalloon, because then the inheritance
+            will stop at the InfoBalloon.
+        -->
+        <Setter Property="Controls:InfoBalloon.HorizontalPlacementTarget" Value="{Binding RelativeSource={RelativeSource Self}}" />
+        <Setter Property="Controls:InfoBalloon.VerticalPlacementTarget" Value="{Binding RelativeSource={RelativeSource Self}}" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Controls:AutoCompleteBox}">
+                    <Grid>
+                        <Border x:Name="mainBorder"
+                                Background="{TemplateBinding Background}"
+                                BorderBrush="{TemplateBinding BorderBrush}"
+                                BorderThickness="{TemplateBinding BorderThickness}"
+                                Padding="3,4,2,2">
+                            <Grid VerticalAlignment="Top">
+                                <ScrollViewer x:Name="PART_ContentHost" Margin="0" />
+                                <TextBlock x:Name="watermarkTextBlock" Margin="3,1,0,0"
+                                           Style="{DynamicResource SearchTextBlockHintTextBlockStyle}"
+                                           Text="{TemplateBinding Behaviors:WatermarkExtension.WatermarkText}"
+                                           Visibility="Collapsed" />
+                            </Grid>
+                        </Border>
+                        <Controls:InfoBalloon x:Name="errorBalloon"
+                                              Content="{Binding (Validation.Errors).CurrentItem.ErrorContent,
+                                                                RelativeSource={RelativeSource TemplatedParent}}"
+                                              HorizontalOffset="5" />
+                        <Controls:TrackablePopup x:Name="popup"
+                                                 MinWidth="{Binding ActualWidth,
+                                                                    RelativeSource={RelativeSource TemplatedParent}}"
+                                                 AllowsTransparency="True"
+                                                 IsOpen="{Binding IsDropDownOpen,
+                                                                  RelativeSource={RelativeSource TemplatedParent}}"
+                                                 StaysOpen="False" VerticalOffset="5">
+                            <Grid Width="{TemplateBinding ActualWidth}" Margin="8,0,8,8">
+                                <Border x:Name="popupBorder" Background="White"
+                                        BorderBrush="{TemplateBinding BorderBrush}"
+                                        BorderThickness="1">
+                                    <Border.Effect>
+                                        <DropShadowEffect BlurRadius="4" ShadowDepth="3"
+                                                          Color="{DynamicResource DialogShadowColor}" />
+                                    </Border.Effect>
+                                    <ListBox x:Name="PART_Selector" IsSynchronizedWithCurrentItem="True"
+                                             ItemsSource="{Binding TextItemsSource,
+                                                                   RelativeSource={RelativeSource TemplatedParent}}"
+                                             Style="{DynamicResource AutoCompleteBoxListBoxStyle}" />
+                                </Border>
+                            </Grid>
+                        </Controls:TrackablePopup>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="true">
+                            <Setter TargetName="mainBorder" Property="Padding" Value="2,3,1,1" />
+                        </Trigger>
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="Behaviors:WatermarkExtension.IsWatermarkVisible" Value="True" />
+                                <Condition Property="IsEnabled" Value="True" />
+                            </MultiTrigger.Conditions>
+                            <Setter TargetName="watermarkTextBlock" Property="Visibility" Value="Visible" />
+                        </MultiTrigger>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <!--
+                                This trigger sets the IsOpen on the InfoBalloon itself, and with that it always overrules the InfoBalloon.IsOpen
+                                attached property that is set on the AutoCompleteBox
+                            -->
+                            <Setter TargetName="errorBalloon" Property="IsOpen" Value="False" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="true">
+                <Setter Property="BorderThickness" Value="2" />
+            </Trigger>
+            <Trigger Property="Validation.HasError" Value="True">
+                <Setter Property="Controls:InfoBalloon.IsOpen" Value="True" />
+            </Trigger>
+            <Trigger Property="Text" Value="">
+                <!--
+                    This trigger overrules the Validation.HasError trigger: in case of empty text,
+                    we don't want an info balloon immediately; only when the automcompletebox got focus once
+                -->
+                <Setter Property="Controls:InfoBalloon.IsOpen" Value="False" />
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+</ResourceDictionary>
